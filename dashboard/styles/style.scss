@@ -1,0 +1,409 @@
+// Colors : -----------------------------------
+$maincolor : #112023 ;
+$main2color : #1a4c57 ;
+$color__buttons :#26e17f;
+$color__buttons2 :#45F0D7 ; 
+//---------------------------------------------
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    background-color: $maincolor;
+    overflow-x: hidden;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+}
+
+aside {
+    width: 18%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $main2color;
+    transition:width 200ms linear;
+    // position: fixed;
+}
+
+.title-con {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+
+    .Dashboard{
+        width: 90%;
+        color: white;
+        font-size: 3rem;
+    }
+    
+    .hmb__menu{
+        width: 10%;
+        background-color: transparent;
+        border: 0;
+        color: #26e17f;
+        font-size: 20px;
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+form {
+    width: 100%;
+}
+
+.my__nav{
+    width: 100%;
+    list-style: none;
+
+    li {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background 300ms linear;
+        &:hover {
+            background-color: #112023b7;
+        }
+        &.on-page {
+            background-color: #112023;
+        }
+        .icons{
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+        }
+        label {
+            cursor: pointer;
+        }
+    }
+}
+
+.end-container {
+    width: 80%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        padding: 10px 0;
+        transition: background 300ms linear;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: #112023b7;
+        }
+        .logout-icons {
+            width: 3rem;
+            height: 3rem;
+            margin-left: 5px;
+        }
+        .logout-link {
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+    }
+    
+    .copyright{
+        font-size: 1.3rem;
+        color: white;
+        text-align: center;
+    }
+}
+
+.hide {
+    width: 5%;
+    h1 {
+        display: none;
+    }
+    #arrow {
+        margin-left: -7px;
+    }
+    .my__nav{  
+        li {
+            input{
+               display: none;
+           }
+        }  
+   }
+   .end-container {
+        div {
+            .logout-link {
+                display: none;
+            }
+        }
+       .copyright{
+            display: none;
+        }
+   }
+}
+
+.menu__logo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.LOGO{
+    font-size: 3rem;
+    color: white;
+}
+
+.link{
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+}
+
+
+.form__add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+
+.input{
+    padding: 1.5rem;
+    width: 75%;
+}
+
+.sect1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+}
+
+%flex_row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+%table{
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: 0 7px;
+}
+
+.sect2{
+    display: flex;
+    justify-content: center;
+    border-radius: 6%;
+    width: 70%;
+    .group1{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+
+        .s__group1{
+            @extend %flex_row;
+            background-color: $maincolor;
+        }
+        .s__group2{
+            @extend %flex_row;
+            align-items: center;
+            justify-content: center;
+            background-color: $main2color;
+            width: 107%;
+            border-radius: 5px;
+            margin: 4px;
+
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 5px
+            }
+        }
+    }
+}
+
+.table__a{
+    @extend %table;
+    color: rgba(255, 255, 255, 0.767);
+    width: 100%;
+    flex-basis: 20%;
+}
+
+.table__n{
+    @extend %table;
+    color: white;
+    width: 100%;
+}
+
+.myBtn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.btn__form1{
+	border: none;
+	border-radius: 0.6rem;
+	padding: 1rem 2rem;
+	font-size: 1.5rem;
+	background-color: $main2color;
+	color: white;
+	margin-top: 2rem;
+	transition: transform 330ms linear , background 330ms linear;
+    &:hover{
+        background-color: white;
+        color: black;
+        transform: scale(1.1);
+    }
+}
+
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: $main2color;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid $maincolor;
+    width: 60%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 33rem;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+// ---------------------- media-queries--------------------------------
+
+@media(max-width:957px){
+    aside {
+        width: 7%;
+    }
+    .link, .Dashboard, #arrow{
+        display: none;
+    }
+    li{
+        display: flex;
+        justify-content: center;
+        img {
+            margin-left: -10px !important;
+        }
+    }
+    .end-container {
+        div {
+            .logout-link {
+                display: none;
+            }
+        }
+       .copyright{
+            display: none;
+        }
+   }
+
+}
+@media(max-width:705px){
+    html{
+        font-size: 35%;
+    }
+    .my__nav{
+        li{
+            .icons{
+                width: 4.5rem;
+                height: 4.5rem;
+            }
+        }
+    }
+    .btn__form1{
+        padding: 2rem 3rem;
+        font-size: 2rem;
+    }
+
+}
+@media(max-width:600px){
+    .sect2{
+        margin: 0 5rem;
+    }
+    .input{
+        width: 100%;
+    }
+}
+@media(max-width:527px){
+    .sect2{
+        margin: 0 1rem;
+    }
+
+}
+
+@media(max-width:415px){
+    .sect2{
+        .group1{
+            .s__group2{
+                margin: 4px;
+            }
+            .s__group1{
+                display: none;
+            }
+        }
+    }
+
+}

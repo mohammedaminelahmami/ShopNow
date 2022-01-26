@@ -1,0 +1,120 @@
+main {
+  min-height: 100vh;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+}
+
+main .pro-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .pro-info .elem {
+  min-width: 200px;
+  width: 31%;
+  max-width: 350px;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #1a4c57;
+  color: #26e18069;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+main .pro-info .elem .elem-h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .pro-info .elem .elem-h b {
+  font-size: 18px;
+  font-family: poppins;
+  color: #e4e4e4;
+  margin: 0 20px;
+}
+
+main .pro-info .elem .elem-h img {
+  width: 50px;
+  color: #e4e4e4;
+  margin: 0 20px;
+}
+
+main .pro-info .elem hr {
+  height: 3px;
+  background-color: #26e17f;
+  border: 1px solid #26e17f;
+  border-radius: 5px;
+}
+
+main .pro-info .elem h4 {
+  font-size: 20px;
+  color: #e4e4e4;
+}
+
+main .charts-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main .charts-container .graph-container {
+  width: 31%;
+  max-width: 350px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  padding: 20px;
+}
+/*# sourceMappingURL=graphs.css.map */

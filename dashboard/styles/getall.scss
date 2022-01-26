@@ -1,0 +1,43 @@
+.section1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+    
+}
+  
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 15%;
+    &:hover{
+        box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.2);
+    }
+    img{
+        width: 100%;
+    }
+    h4,p{
+        color: white;
+        font-weight: 700;
+    }
+  }
+
+  .containerr {
+    padding: 2px 16px;
+  }
+
+.product__qty{
+    color: white;
+    font-size: 1.2rem;
+}
+
+@media(max-width: 971px){
+    .card{
+        width: 30%;
+    }
+}
+@media(max-width:423px){
+    .card{
+        width: 50%;
+    }
+}

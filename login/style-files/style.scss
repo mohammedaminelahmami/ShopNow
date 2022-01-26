@@ -1,0 +1,490 @@
+@import "normal-mixins.scss";
+@import "media-queries.scss";
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+    
+main {
+    width: 100%;
+    height: 100%;
+    @include flex-row();
+    //media queries for responsive design.
+    @include breakpoint(670px) {
+        @include flex-column();
+    }
+
+    .info-side {
+        width: 50%;
+        height: 100vh;
+        @include flex-column();
+        @include center();
+        justify-content: space-around;
+        background-color: #112023;
+        //media queries for responsive design.
+        @include sm {
+            width: 40%;
+        }
+        @include breakpoint(670px) {
+            width: 100%;
+        }
+
+        h1 {
+            @include font(700, 40px, poppins);
+            color: white;
+            //media queries for responsive design.
+            @include md {
+                @include font(700, 35px, poppins);
+                margin-top: 20px;
+            }
+            @include sm {
+                @include font(700, 30px, poppins);
+            }
+            @include xs {
+                @include font(700, 25px, poppins);
+            }
+        }
+        .slider-container {
+            width: 90%;
+            overflow: hidden;
+
+            .slid-mov {         
+                width: 400%;
+                @include flex-row();
+                transition: transform 700ms linear;
+
+                .elem {
+                    flex-basis: 100%;
+                    @include flex-column();
+                    @include center();
+                    margin: 0 15px;
+                    p {
+                        width: 500px;
+                        @include font(300, 16px, poppins);
+                        color: white;
+                        text-align: center;
+                        &::first-letter {
+                            @include font(500, 25px, poppins);
+                            //media queries for responsive design.
+                            @include md {
+                                @include font(500, 23px, poppins);
+                            }
+                            @include sm {
+                                @include font(500, 20px, poppins);
+                            }
+                            @include xs {
+                                @include font(500, 16px, poppins);
+                            }
+                        }
+                        //media queries for responsive design.
+                        @include md {
+                            width: 400px;
+                            @include font(300, 15px, poppins);
+                        }
+                        @include breakpoint(900px) {
+                            width: 90%;
+                        }
+                        @include sm {
+                            @include font(300, 14px, poppins);
+                        }
+                        @include xs {
+                            @include font(300, 12px, poppins);
+                        }
+                    }
+                    img {
+                        width: 400px;
+                        margin-top: 20px;
+                        //media queries for responsive design.
+                        @include md {
+                            width: 350px;
+                            margin-top: 30px;
+                        }
+                        @include breakpoint(900px) {
+                            width: 300px;
+                        }
+                        @include sm {
+                            width: 90%;
+                        }
+                        @include breakpoint(670px) {
+                            margin-top: 40px;
+                        }
+        
+                    }
+                }
+            }
+        }
+            
+
+        .keys {
+            @include flex-row();
+           
+            
+
+            i {
+                @include flex-column();
+                @include center();
+                width: 50px;
+                height: 50px;
+                background:#1A4C57;
+                font-size: 22px;
+                color: white;
+                border-radius: 100px;
+                margin: 0 20px;
+                cursor: pointer;
+                transition:background 300ms linear;
+                 //media queries for responsive design.
+                @include sm {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                    margin: 0 10px;
+                }
+
+                &:hover {
+                    background: #26e17f;
+                }
+            }
+        }
+    }
+    
+
+    .second-side {
+        width: 50%;
+        height: 100vh;
+        @include flex-column();
+        @include center();
+        background: url(../images/bg.jpg) center no-repeat;
+        background-size: cover;
+        //media queries for responsive design.
+        @include sm {
+            width: 60%;
+        }
+        @include breakpoint(670px) {
+            width: 100%;
+        }
+
+        .form-side {
+            width: 70%;
+            height: 90%;
+            @include flex-column();
+            @include center();
+            justify-content: space-evenly;
+            background:rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid #1120234d;
+            border-radius: 40px;
+            //media queries for responsive design.
+            @include xs {
+                width: 85%;
+            }
+            
+            h2 {
+                 @include font(700, 35px, poppins);
+                 color: white;
+                 //media queries for responsive design.
+                 @include md {
+                     @include font(700, 30px, poppins);
+                 }
+                 @include xs {
+                    @include font(500, 25px, poppins);
+                }
+            }
+            .accounts {
+                width:300px;
+                @include flex-row();
+                @include center();
+                justify-content: space-around;
+                //media queries for responsive design.
+                @include md {
+                    width: 250px;
+                }
+                @include xs {
+                    width: 200px;
+                }
+
+
+                div {
+                    @include flex-row();
+                    @include center();
+                    background-color: rgba(255, 255, 255, 0.5);
+                    border-radius: 10px;
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    //media queries for responsive design.
+                    @include md {
+                        width: 50px;
+                        height:50px;
+                    }
+                    @include xs {
+                        width: 45px;
+                        height:45px;
+                    }
+                    
+
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        margin: auto;
+                        //media queries for responsive design.
+                        @include md {
+                            width:30px;
+                            height:30px;
+                        }
+                        @include xs {
+                            width:25px;
+                            height:25px;
+                        }
+                    }
+                }
+            }
+            .or-email {
+                @include font(300, 12px, poppins);
+                color: white;
+                position: relative;
+                //media queries for responsive design.
+                @include md {
+                    @include font(300, 11px, poppins);
+                }
+                @include xs {
+                    @include font(300, 10px, poppins);
+                }
+                
+
+                &::before {
+                    content: " ";
+                    height: 1px;
+                    width: 110px;
+                    position:absolute;
+                    top: 50%;
+                    left: -120%;
+                    transform: translateY(-50%);
+                    background-color:#3e4f53;
+                    border: 1px solid #3e4f53;
+                    border-radius: 5px;
+                    //media queries for responsive design.
+                    @include lg {
+                        width: 100px;
+                        left: -110%;
+                    }
+                    @include md {
+                        width: 80px;
+                        left: -100%;
+                    }
+                    @include breakpoint(930px) {
+                        width: 60px;
+                        left: -70%;
+                    }
+                    @include breakpoint(670px) {
+                        width: 90px;
+                        left: -100%;
+                    }
+                    @include xs {
+                        width: 20vw;
+                        left: -22vw;
+                    }
+                }
+                &::after {
+                    content: " ";
+                    height: 1px;
+                    width: 110px;
+                    position:absolute;
+                    top: 50%;
+                    right: -120%;
+                    transform: translateY(-50%);
+                    background-color:#3e4f53;
+                    border: 1px solid #3e4f53;
+                    border-radius: 5px;
+                    //media queries for responsive design.
+                    @include lg {
+                        width: 100px;
+                        right: -110%;
+                    }
+                    @include md {
+                        width: 80px;
+                        right: -100%;
+                    }
+                    @include breakpoint(930px) {
+                        width: 60px;
+                        right: -70%;
+                    }
+                    @include breakpoint(670px) {
+                        width: 90px;
+                        right: -100%;
+                    }
+                    @include xs {
+                        width: 20vw;
+                        right: -22vw;
+                    }
+                }
+            }
+            form {
+                width: 100%;
+                @include flex-column();
+                @include center();
+                margin-top: -20px;
+
+                .input-container{
+                    position: relative;
+                    width: 80%;
+                    height: 50px;
+                    margin-bottom: 40px;
+                    //media queries for responsive design.
+                    @include breakpoint(930px) {
+                        width: 90%;
+                    }
+                    
+
+                    input, label {
+                        width: 100%;
+                        color: #081113;
+                    }
+                    label {
+                        @include font(500, 18px, roboto);
+                        padding-top: 15px;
+                        //media queries for responsive design.
+                        @include sm {
+                            @include font(500, 16px, roboto);
+                        }
+                    }
+                    input {
+                        @include font(500, 14px, roboto);
+                        outline: none;
+                        padding: 15px 10px;
+                        border:3px solid transparent;
+                        border-radius: 8px;
+                        transition: border 300ms linear;
+                        //media queries for responsive design.
+                        @include xs {
+                            border:2px solid transparent;
+                            @include font(500, 12px, roboto);
+                        }
+                    }
+                    &.success input{
+                        border-color: #2ecc71;
+                    }
+                    &.error input{
+                        border-color: #e74c3c;
+                    }
+                    i {
+                        position: absolute;
+                        top: 80%;
+                        right: 10px;
+                        visibility:hidden;
+                        pointer-events: none;
+                        //media queries for responsive design.
+                        @include xs {
+                            font-size: 12px;
+                            top: 75%;
+                        }
+                    }
+                    &.success i.fa-check-circle{
+                        color:#2ecc71;
+                        visibility:visible;
+                    }
+                    &.error i.fa-exclamation-circle{
+                        color:#e74c3c;
+                        visibility: visible;
+                    }
+                    p {
+                        @include font(400, 12px, roboto);
+                        visibility: hidden;
+                    } 
+                    &.success p {
+                        color:#2ecc71;
+                    }
+                    &.error p {
+                        visibility: visible;
+                        color: #e74c3c;
+                    }
+                    
+                }
+
+                
+                .form-check-pass {
+                    width: 80%;
+                    @include flex-row();
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    padding: 5px 10px 10px;
+                    //media queries for responsive design.
+                    @include breakpoint(930px) {
+                        width: 90%;
+                    }
+                    @include xs {
+                        height: 35px;
+                    }
+                    
+                    div {
+                        @include flex-row;
+                        @include center;
+                        
+                        input {
+                            margin: 0;
+                        }
+                        label {
+                            @include font(500, 14px, roboto);
+                            color: #081113;
+                            margin: 2px;
+                            //media queries for responsive design.
+                            @include xs {
+                                @include font(500, 12px, roboto);
+                            }
+                            
+                        }
+                    }
+                    
+                    a {
+                        @include font(500, 12px, poppins);
+                        color: #43FF79;
+                        text-decoration: none;
+                        text-emphasis-position: right;
+                        //media queries for responsive design.
+                        @include xs {
+                            @include font(500, 11px, roboto);
+                        }
+                        &:hover {
+                            text-decoration: underline;
+
+                        }
+                    }
+                }
+                input[type="submit"] {
+                    width: 80%;
+                    background:rgba($color: #112023, $alpha: 0.7);
+                    @include font(400, 20px, roboto);
+                    outline: none;
+                    margin-bottom: 10px;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 8px;
+                    color: white;
+                    cursor: pointer;
+                    transition:background 300ms linear;
+                    &:hover {
+                        background:rgba($color: #112023, $alpha: 0.9);
+                    }
+                    //media queries for responsive design.
+                    @include xs {
+                        @include font(500, 12px, roboto);
+                    }
+                }
+
+            }
+            .cpy {
+                @include font(300, 16px, poppins);
+                color: white;
+                //media queries for responsive design.
+                @include sm {
+                    @include font(500, 14px, poppins);
+                }
+                @include xs {
+                    @include font(500, 12px, poppins);
+                }
+            }
+         }
+    }
+}

@@ -1,0 +1,15 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+@mixin font($weight, $size, $family) {
+    font: $weight $size $family;
+}
