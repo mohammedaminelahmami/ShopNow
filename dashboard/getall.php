@@ -15,8 +15,8 @@
         <div class="card">
             <img src="imgs/prodd.png" alt="Avatar">
             <div class="containerr">
-                <p class="product__qty"><?php echo "Product Name  : " . $result["ProductName"]; ?></p>
-                <p class="product__qty"><?php echo "Quantity : " . $result["Quantity"]; ?></p>
+                <p class="product__qty"> <span style=""> Product Name : </span> <?php echo $result["ProductName"]; ?></p>
+                <p class="product__qty"> <span style=""> Quantity : </span> <?php echo $result["Quantity"]; ?></p>
             </div>
         </div>
             

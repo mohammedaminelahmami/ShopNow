@@ -424,7 +424,7 @@ form {
 
 @media (max-width: 957px) {
   aside {
-    width: 7%;
+    width: 13%;
   }
   .link, .Dashboard, #arrow {
     display: none;
