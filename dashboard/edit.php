@@ -2,8 +2,8 @@
 
     require "db/connect.php";
 
-    if(isset($_POST["Edit"])){
-
+    if(isset($_POST["Edit"]))
+    {
         $id = $_POST['id'];
         $productname_upd = $_POST['productname_upd'];
         $Price_upd = $_POST['Price_upd'];

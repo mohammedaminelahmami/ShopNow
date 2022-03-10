@@ -422,7 +422,16 @@ form {
   cursor: pointer;
 }
 
+@media (max-width: 1200px) {
+  .close {
+    margin-right: -10rem;
+  }
+}
+
 @media (max-width: 957px) {
+  .hide {
+    width: 13%;
+  }
   aside {
     width: 13%;
   }
@@ -446,6 +455,9 @@ form {
   .end-container .copyright {
     display: none;
   }
+  .close {
+    margin-right: -14rem;
+  }
 }
 
 @media (max-width: 705px) {
@@ -460,6 +472,9 @@ form {
     padding: 2rem 3rem;
     font-size: 2rem;
   }
+  .close {
+    margin-right: -7rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -469,11 +484,17 @@ form {
   .input {
     width: 100%;
   }
+  .close {
+    margin-right: -12rem;
+  }
 }
 
 @media (max-width: 527px) {
   .sect2 {
     margin: 0 1rem;
+  }
+  .close {
+    margin-right: -18.5rem;
   }
 }
 
@@ -483,6 +504,9 @@ form {
   }
   .sect2 .group1 .s__group1 {
     display: none;
+  }
+  .close {
+    margin-right: -19rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

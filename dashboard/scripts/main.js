@@ -1,4 +1,3 @@
-
 let hmb__menu = document.getElementById("hmb__menu");
 let arrow = document.getElementById("arrow")
 let aside = document.querySelector("aside");
@@ -39,6 +38,7 @@ for(let i = 0; i < btn.length; i++){
 		modal[i].style.display = "none";
 	})
 }
+
 
 
 

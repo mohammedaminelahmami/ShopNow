@@ -189,14 +189,12 @@ form {
     padding: 10px 20px;
 }
 
-
 .form__add{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 60%;
 }
-
 
 .input{
     padding: 1.5rem;
@@ -335,7 +333,16 @@ form {
 
 // ---------------------- media-queries--------------------------------
 
-@media(max-width:957px){
+@media(max-width: 1200px){
+    .close {
+        margin-right: -10rem;
+    }
+}
+
+@media(max-width: 957px){
+    .hide {
+        width: 13%;
+    }
     aside {
         width: 13%;
     }
@@ -360,7 +367,12 @@ form {
         }
    }
 
+   .close{
+        margin-right: -14rem;
+    }
+
 }
+
 @media(max-width:705px){
     html{
         font-size: 35%;
@@ -377,6 +389,9 @@ form {
         padding: 2rem 3rem;
         font-size: 2rem;
     }
+    .close{
+        margin-right: -7rem;
+    }
 
 }
 @media(max-width:600px){
@@ -386,12 +401,17 @@ form {
     .input{
         width: 100%;
     }
+    .close{
+        margin-right: -12rem;
+    }
 }
 @media(max-width:527px){
     .sect2{
         margin: 0 1rem;
     }
-
+    .close{
+        margin-right: -18.5rem;
+    }
 }
 
 @media(max-width:415px){
@@ -404,6 +424,9 @@ form {
                 display: none;
             }
         }
+    }
+    .close{
+        margin-right: -19rem;
     }
 
 }

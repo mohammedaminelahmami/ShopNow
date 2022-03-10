@@ -1,8 +1,8 @@
 <?php
 
     $dsn = "mysql:host = localhost; dbname = shopnow";
-    $user = "shopnow";
-    $pass = "shopnow";
+    $user = "root";
+    $pass = "";
 
     try{
 
@@ -15,5 +15,3 @@
     }
 
 ?>
-
-

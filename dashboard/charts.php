@@ -28,12 +28,12 @@
         </div>
         <div class="charts-container">
             <div class="graph-container">
-                <canvas id="myChart_1"></canvas>
+                <canvas id="myChart_1" class="chart"></canvas>
             </div>
             <div class="graph-container">
-                <canvas id="myChart_2"></canvas>
+                <canvas id="myChart_2" class="chart"></canvas>
             </div>
             <div class="graph-container">
-                <canvas id="myChart_3"></canvas>
+                <canvas id="myChart_3" class="chart"></canvas>
             </div>
         </div>

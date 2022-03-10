@@ -1,9 +1,9 @@
 <?php
 
-    require "db/connect.php";
+    require_once "db/connect.php";
 
-    if (isset($_POST['submit'])) {
-
+    if(isset($_POST['submit']))
+    {
         $productname = htmlspecialchars($_POST['productname']);
         $Price = htmlspecialchars( $_POST['Price']);
         $Quantity = htmlspecialchars($_POST['Quantity']);
@@ -88,10 +88,10 @@
                     <form action="edit.php" method="POST">
                         <input type="text" name="id" value="<?php echo $id?>" hidden>
 
-                        <input type="text" placeholder="Product Name" name="productname_upd" value="<?php echo $result["ProductName"]; ?>" class="input">
-                        <input type="number" placeholder="Price" name="Price_upd" value="<?php echo $result["Price"]; ?>" class="input">
-                        <input type="number" placeholder="Quantity" name="Quantity_upd" value="<?php echo $result["Quantity"]; ?>" class="input">
-                        <input type="text" placeholder="Categorie" name="Category_upd" value="<?php echo $result["Category"]; ?>" class="input">
+                        <input type="text" placeholder="Product Name" name="productname_upd" value="<?php echo $result["ProductName"]; ?>" class="input" required>
+                        <input type="number" placeholder="Price" name="Price_upd" value="<?php echo $result["Price"]; ?>" class="input" required>
+                        <input type="number" placeholder="Quantity" name="Quantity_upd" value="<?php echo $result["Quantity"]; ?>" class="input" required>
+                        <input type="text" placeholder="Categorie" name="Category_upd" value="<?php echo $result["Category"]; ?>" class="input" required>
 
                         <br>
                         <input type="submit" value="Edit Product" name="Edit" class="btn__form1" style="background-color: white; color:black;">

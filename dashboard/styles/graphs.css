@@ -72,7 +72,7 @@ main .pro-info .elem .elem-h {
 
 main .pro-info .elem .elem-h b {
   font-size: 18px;
-  font-family: poppins;
+  font-family: 'poppins' sans-serif;
   color: #e4e4e4;
   margin: 0 20px;
 }
@@ -106,15 +106,23 @@ main .charts-container {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main .charts-container .graph-container {
-  width: 31%;
+  width: 35rem;
   max-width: 350px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   border-radius: 10px;
   padding: 20px;
+}
+
+@media (max-width: 705px) {
+  main .charts-container .graph-container {
+    width: 55rem;
+  }
 }
 /*# sourceMappingURL=graphs.css.map */

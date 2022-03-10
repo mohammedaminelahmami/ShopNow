@@ -1,4 +1,3 @@
-
 <?php 
     require "db/connect.php";
 
@@ -7,7 +6,7 @@
 
     $results = $e->fetchAll(PDO::FETCH_ASSOC);
 
-?>  
+?>
 
 <section class="section1">
     <?php foreach($results as $result) :?>
@@ -22,3 +21,4 @@
             
     <?php endforeach ?>
 </section>
+

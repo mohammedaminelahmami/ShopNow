@@ -41,7 +41,7 @@ main {
 
                 b {
                     font-size: 18px;
-                    font-family: poppins;
+                    font-family: 'poppins' sans-serif;
                     color: rgb(228, 228, 228);
                     margin: 0 20px;
                 }
@@ -62,21 +62,30 @@ main {
                 color: rgb(228, 228, 228);
             }
         }
-
     }
+
     .charts-container {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        
-
+        flex-wrap: wrap;
         .graph-container {
-            width: 31%;
+            width: 35rem;
             max-width: 350px;
             height: fit-content;
             border-radius: 10px;
             padding: 20px;
+        }
+    }
+}
+
+@media(max-width: 705px){
+    main{
+        .charts-container{
+            .graph-container {
+                width: 55rem;
+            }
         }
     }
 }

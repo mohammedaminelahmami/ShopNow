@@ -88,7 +88,10 @@
         </form>
         <div class="end-container">
             <div id="logout-bt">
-                <img src="imgs/logout.png" alt="logout icon" class="logout-icons">
+                <a href="../login/index.php">
+                    <img src="imgs/logout.png" alt="logout icon" class="logout-icons">
+                </a>
+                <!-- <img src="imgs/logout.png" alt="logout icon" class="logout-icons"> -->
                 <a href="../login/index.php" class="logout-link">Logout</a>
             </div>
             <p class="copyright"> Copyright © 2022 ShopNow. All rights reserved. </p>
